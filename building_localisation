@@ -1,0 +1,5 @@
+#naming buildings for the interface
+#<VARIABLE NAME>: <DISPLAY NAME>
+
+#e.g
+town_hall: Town Hall

@@ -1,0 +1,26 @@
+#NAME = {
+#	level_max = {<INTEGER>}
+#	cost = {
+#		wood = {<LINEAR COEFFICIENT>, <EXPONENTIAL COEFFICIENT>; <INITIATING LEVEL>}
+#		stone = {<LINEAR COEFFICIENT>, <EXPONENTIAL COEFFICIENT>; <INITIATING LEVEL>}
+#		crystal = {<LINEAR COEFFICIENT>, <EXPONENTIAL COEFFICIENT>; <INITIATING LEVEL>}
+#		sulphur = {<LINEAR COEFFICIENT>, <EXPONENTIAL COEFFICIENT>; <INITIATING LEVEL>}
+#		wine = {<LINEAR COEFFICIENT>, <EXPONENTIAL COEFFICIENT>; <INITIATING LEVEL>}
+#	}
+#	time = {<LINEAR COEFFICIENT, <EXPONENTIAL COEFFICIENT>}
+#	<UNIQUE ABILITIES> = {<LEVEL MULTIPLIER>}  Note: not always the only factor, full equatiosn are hardcoded
+#}
+#E.g
+
+town_hall = {
+	level_max = {50}
+	cost = {
+		wood = {10, 1.34; 1}
+		stone = {10, 1.39; 6}
+		crystal = {}	#leaving blank or just deleting unused rss has the same effect as putting in {0,0,...}
+		sulphur = {}
+		wine = {}
+	}
+	time = {3, 1.15}
+	citizen_count = {10} #multiplyer per level that is then added on to previous total
+}
