@@ -13,7 +13,7 @@ pg.display.set_caption('Mare Nostrum')
 clock = pg.time.Clock()
 
 
-islandSummer = pg.image.load(r'C:\Program Files (x86)\MareNostrum\gfx\backgrounds\CapitalBackgound.jpg')
+islandSummer = pg.image.load(r'C:\Program Files (x86)\MareNostrum\gfx\town\background\rank_5\Capital_R5.jpg')
 
 
 
@@ -27,7 +27,7 @@ Background(0,0)
 
 
 
-townHall = pg.image.load(r'C:\Program Files (x86)\MareNostrum\gfx\town\TownHall.png').convert_alpha()
+townHall = pg.image.load(r'C:\Program Files (x86)\MareNostrum\gfx\town\buildings\TownHall.png').convert_alpha()
 
 gameDisplay.blit(townHall, (840,400)) # paint to screen
 pg.display.flip() # paint screen one time
@@ -51,20 +51,21 @@ while not crashed:
                 display_width = 1386
                 display_height = 924
                 gameDisplay = pg.display.set_mode((display_width,display_height))
-                islandSummer = pg.image.load(r'C:\Program Files (x86)\MareNostrum\gfx\backgrounds\Island1_Summer(1386x924).jpg')
+                islandSummer = pg.image.load(r'C:\Program Files (x86)\MareNostrum\gfx\island\background\Island1_Summer(1386x924).jpg')
                 
             else:
                 print( "click-outside!" )
         
         elif ( click_rect.collidepoint( np.subtract(mouse_position, (840,400) ) ) ):
             print( "hover" )
-            townHall = pg.image.load(r'C:\Program Files (x86)\MareNostrum\gfx\town\GovernorsResidence.png').convert_alpha()
-            gameDisplay.blit(townHall, (828,395)) # paint to screen
+            gameDisplay.blit(townHall, (838,398)) # paint to screen
+            townHall_glow = pg.image.load(r'C:\Program Files (x86)\MareNostrum\gfx\town\buildings\Glow\townHallGlow.png').convert_alpha()
+            gameDisplay.blit(townHall_glow, (838,398)) # paint to screen
         
         else:
             print( "not hover" )
-            townHall = pg.image.load(r'C:\Program Files (x86)\MareNostrum\gfx\town\TownHall.png').convert_alpha()
-            gameDisplay.blit(townHall, (840,400)) # paint to screen
+            townHall = pg.image.load(r'C:\Program Files (x86)\MareNostrum\gfx\town\buildings\TownHall.png').convert_alpha()
+            gameDisplay.blit(townHall, (838,398)) # paint to screen
             
         
        # print (event)
